@@ -1,0 +1,126 @@
+
+    <!-- Main Header -->
+  <header th:fragment="header" class="main-header" th:each="organisation : ${organisations}">
+
+    <!-- Logo -->
+    <a href="#" class="logo" >
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">
+
+       <img  th:src="@{${'image/display/'+ organisation.id}}" 
+               			  alt="Your logo" width="40"/>
+      </span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">
+      <img  th:src="@{${'image/display/'+ organisation.id}}" 
+               			  alt="Your logo" width="100"/>
+      </span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+           <li class="dropdown messages-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                 <marquee><h4>GOBOU SHOP SMART SHOPPING</h4></marquee> 
+                
+            </a>
+          </li>
+          <li class="dropdown messages-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               <h4 th:text="${#dates.format(#dates.createNow(), 'HH:mm')}"></h4>
+            </a>
+          </li>
+           <li class="dropdown messages-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               <h4 th:text="${#dates.format(#dates.createNow(), 'dd-MM-yyyy')}"></h4>
+            </a>
+          </li>
+        
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img th:src="@{/dist/img/USA 233 .JPG}" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">Sinepolo Soumaoro</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img th:src="@{/dist/img/USA 233 .JPG}" class="img-circle" alt="User Image">
+                <p>
+               Full Stack Developer
+                  <small>Java</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default ">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a th:href="@{../admin/logout}" class="btn btn-default ">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+   
+   <!-- End header section -->
+   
+   
+   
+    <!-- Sidebar user panel (optional) -->
+    
+      <div th:fragment="sidebarUser" class="user-panel">
+        <div class="pull-left image">
+          <img th:src="@{/dist/img/USA 233 .JPG}" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Super Administrator</p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      
+  <!-- Sidebar user panel (optional) -->
+  
+    <!-- Main Footer -->
+  <footer th:fragment="footer" class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Sinepolo Soumaoro Java Full Stack Developer
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2023 <a href="#">Gobou Shop</a>.</strong> All rights
+    reserved.
+  </footer>
+  
+  
+      
